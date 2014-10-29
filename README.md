@@ -69,3 +69,32 @@ def applyShift(text, shift):
     newtext = applyCoder(text, buildCoder(shift))
     
     return newtext
+
+def findBestShift(wordList, text):
+
+    """
+    Finds a shift key that can decrypt the encoded text.
+    text: string
+    returns: 0 <= int < 26
+    """
+    ### TODO
+
+    maxwords = 0
+    bestshift = 0
+    validwords = 0
+    for k in range(26):
+        mylist = []
+        newtext = applyShift(text, k)
+        
+        mylist += newtext.split(' ')
+        
+        #print mylist
+        
+        
+        for word in mylist: 
+            if isWord(wordList, word) == True:
+                validwords += 1
+            if validwords > maxwords:
+                maxwords = validwords
+                bestshift = k
+    return bestshift
