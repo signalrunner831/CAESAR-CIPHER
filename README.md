@@ -32,3 +32,24 @@ def buildCoder(shift):
     
     return z
     
+    
+def applyCoder(text, coder):
+
+    """
+    Applies the coder to the text. Returns the encoded text.
+    text: string
+    coder: dict with mappings of characters to shifted characters
+    returns: text after mapping coder chars to original text
+    """
+    
+    Newtext = ""
+    
+    for i in text:
+        if i in coder:
+            #print coder[i]
+            Newtext += coder[i]
+        else:
+            Newtext +=i
+    return Newtext 
+    
+
