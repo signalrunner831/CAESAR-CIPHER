@@ -8,7 +8,7 @@ def buildCoder(shift):
     like punctuation, numbers, and spaces. 
     shift: 0 <= int < 26
     returns: dict"""
-    ### TODO 
+    ###
     
     CipherDictlower = {}
     originallower = string.ascii_lowercase
@@ -63,8 +63,8 @@ def applyShift(text, shift):
     shift: amount to shift the text (0 <= int < 26)
     returns: text after being shifted by specified amount.
     """
-    ### TODO.
-    ### HINT: This is a wrapper function.
+    ### 
+    ### 
     
     newtext = applyCoder(text, buildCoder(shift))
     
@@ -77,7 +77,7 @@ def findBestShift(wordList, text):
     text: string
     returns: 0 <= int < 26
     """
-    ### TODO
+    ### 
 
     maxwords = 0
     bestshift = 0
@@ -108,7 +108,7 @@ def decryptStory():
     your decryption of the story.
     returns: string - story in plain text
     """
-    ### TODO
+    ### 
     
     loadWords()
     getStoryString()
